@@ -3,9 +3,10 @@ import './Todo.css'
 
 export default function Todo(props) {
     return (
-        <div>
-            <h2>{props.header}</h2>
-            <button>Delete</button>
+        <div className='todo'>
+            <h2>{props.title}</h2>
+            <p>{props.para}</p>
+            <button onClick={() => { }}>Delete</button>
         </div>
     )
 }
