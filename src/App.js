@@ -1,10 +1,11 @@
+import Title from "./components/Title";
 import Todo from "./components/Todo";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>My Todo List</h1>
+      <Title />
       <Todo
         header='Finish FES'
       />
