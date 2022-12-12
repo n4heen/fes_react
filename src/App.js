@@ -1,13 +1,10 @@
-import { useState } from "react";
-import Counter from "./components/Counter";
+import { useEffect, useState } from "react";
 import Modal from "./components/Modal";
 import Title from "./components/Title";
 import Todo from "./components/Todo";
 
 
 function App() {
-
-
 
   const [toggleModal, setToggleModal] = useState(false)
 
@@ -19,6 +16,11 @@ function App() {
   function cancel() {
     setToggleModal(false)
   }
+
+  useEffect(() => {
+
+  }, [])
+
 
   return (
     <div className="App">

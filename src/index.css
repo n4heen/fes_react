@@ -1,8 +1,8 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-.todo__wrapper{
+.todo__wrapper {
   display: flex;
   flex-wrap: wrap;
 }
