@@ -11,11 +11,13 @@ function App() {
 
   const [toggleModal, setToggleModal] = useState(false)
 
-
+  function deleteToDo() {
+    setToggleModal(toggleModal => !toggleModal)
+  }
 
   return (
     <div className="App">
-      <Counter/>
+
       <Title />
       <>
         <input type="text" onChange={(event) => {
@@ -27,27 +29,28 @@ function App() {
         <Todo
           title='Finish FES'
           para="Join a dynamically growing hacking community and take your cybersecurity skills to the next level through the most captivating, gamified, hands-on training experience!"
-          toggleModal={toggleModal}
+deleteToDo={deleteToDo}
 
         />
         <Todo
           title='Finish Interview Section'
           para="Join a dynamically growing hacking community and take your cybersecurity skills to the next level through the most captivating, gamified, hands-on training experience!"
-          toggleModal={toggleModal}
+          deleteToDo={deleteToDo}
 
         />
         <Todo
           title='Land a thing'
           para="Join a dynamically growing hacking community and take your cybersecurity skills to the next level through the most captivating, gamified, hands-on training experience!"
-          toggleModal={toggleModal}
+          deleteToDo={deleteToDo}
 
 
         />
       </div>
       {toggleModal && <Modal
         modalPara="Are you sure?"
-        toggleModal={toggleModal}
+        deleteToDo={deleteToDo}
       />}
+  
     </div>
   );
 }
