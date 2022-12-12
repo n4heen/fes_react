@@ -17,6 +17,6 @@ export default function Home() {
     }, [])
 
     return (
-        <div>{users}</div>
+        <div>{users.length > 0 && users.name}</div>
     )
 }
