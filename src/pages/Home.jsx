@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Axios } from 'axios'
 
 export default function Home() {
-  return (
-    <div>Home</div>
-  )
+
+    useEffect(() => {
+        "https://jsonplaceholder.typicode.com/users"
+    }, [])
+
+    return (
+        <div>Home</div>
+    )
 }
