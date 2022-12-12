@@ -12,7 +12,11 @@ function App() {
   const [toggleModal, setToggleModal] = useState(false)
 
   function deleteToDo() {
-    setToggleModal(toggleModal => !toggleModal)
+    setToggleModal(true)
+  }
+
+  function cancel() {
+    setToggleModal(false)
   }
 
   return (
@@ -29,7 +33,7 @@ function App() {
         <Todo
           title='Finish FES'
           para="Join a dynamically growing hacking community and take your cybersecurity skills to the next level through the most captivating, gamified, hands-on training experience!"
-deleteToDo={deleteToDo}
+          deleteToDo={deleteToDo}
 
         />
         <Todo
@@ -48,9 +52,9 @@ deleteToDo={deleteToDo}
       </div>
       {toggleModal && <Modal
         modalPara="Are you sure?"
-        deleteToDo={deleteToDo}
+        cancel={cancel}
       />}
-  
+
     </div>
   );
 }
