@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
 import './Modal.css'
 
 export default function Modal(props) {
 
-    const [toggleModal, setToggleModal] = useState(false)
     return (
         <>
             <div className="modal">
