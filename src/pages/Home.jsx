@@ -1,10 +1,18 @@
 import React, { useEffect } from 'react'
-import { Axios } from 'axios'
+import axios from 'axios'
 
 export default function Home() {
 
+
+    async function fetchUser() {
+        const { data } = await axios.get("https://jsonplaceholder.typicode.com/users")
+        console.log(data)
+    }
+
     useEffect(() => {
-        "https://jsonplaceholder.typicode.com/users"
+
+
+        fetchUser()
     }, [])
 
     return (
