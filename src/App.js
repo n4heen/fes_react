@@ -13,6 +13,7 @@ function App() {
 
   function deleteToDo() {
     setToggleModal(true)
+    console.log('egg')
   }
 
   function cancel() {
