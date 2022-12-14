@@ -3,13 +3,11 @@ import { useParams } from 'react-router-dom'
 
 export default function Users() {
 
-    const { username } = useParams()
+    const { id } = useParams()
 
-    useEffect(()=>{
 
-    },[])
 
     return (
-        <div>Users</div>
+        <div>{id}</div>
     )
 }
